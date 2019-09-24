@@ -67,9 +67,9 @@ end
 
    def self.all_students_in_grade_X
      sql = <<-SQL
-       SELECT * FROM students WHERE grade = 10 ORDER BY id LIMIT ?
+       SELECT * FROM students WHERE grade = ?
      SQL
-     DB[:conn].execute(sql, x).collect do |row|
+     DB[:conn].execute(sql).collect do |row|
        self.new_from_db(row)
      end
 
