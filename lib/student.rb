@@ -49,11 +49,11 @@ end
     end
   end
 
-  def self.first_X_students_in_grade_10(name)
+  def self.first_X_students_in_grade_10(x)
     sql = <<-SQL
       SELECT name FROM students WHERE grade = 10 LIMIT 1
     SQL
-    DB[:conn].execute(sql, name).collect do |row|
+    DB[:conn].execute(sql, x).collect do |row|
       self.new_from_db(row)
     end.first
   end
