@@ -30,6 +30,7 @@ end
     # return a new instance of the Student class
   end
 
+  def all_students_in_grade_9(name)
   def save
     sql = <<-SQL
       INSERT INTO students (name, grade)
