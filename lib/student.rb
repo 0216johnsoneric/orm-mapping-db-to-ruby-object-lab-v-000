@@ -12,7 +12,7 @@ end
   def self.all
     sql = <<-SQL
     SELECT *
-    FROM songs
+    FROM student
     SQL
   end
 
