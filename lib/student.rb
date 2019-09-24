@@ -34,7 +34,7 @@ end
     sql = <<-SQL
       SELECT * FROM students WHERE grade = 9
     SQL
-  DB[:conn].execute(sql)
+  DB[:conn].execute(sql, grade)
   end
 
   def save
