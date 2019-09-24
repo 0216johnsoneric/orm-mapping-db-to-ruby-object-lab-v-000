@@ -70,11 +70,11 @@ end
   def self.all_students_in_grade_X
     sql = <<-SQL
       SELECT * FROM students WHERE grade = ?
-      SQL
+    SQL
 
     DB[:conn].execute(sql, "10")
   end
-  
+
   def save
     sql = <<-SQL
       INSERT INTO students (name, grade)
