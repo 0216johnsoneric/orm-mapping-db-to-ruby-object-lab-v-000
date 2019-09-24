@@ -67,13 +67,6 @@ end
     end.first
   end
 
-  def self.all_students_in_grade_X("10")
-    sql = <<-SQL
-      SELECT * FROM students WHERE grade = ?
-    SQL
-
-    DB[:conn].execute(sql, "10")
-  end
 
   def save
     sql = <<-SQL
