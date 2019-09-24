@@ -31,6 +31,11 @@ end
   end
 
   def all_students_in_grade_9(name)
+    sql = <<-SQL
+    SELECT * FROM students WHERE grade = 9
+    SQL
+  end 
+
   def save
     sql = <<-SQL
       INSERT INTO students (name, grade)
