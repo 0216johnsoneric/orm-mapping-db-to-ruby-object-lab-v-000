@@ -9,14 +9,14 @@ class Student
   new_student  # return the newly created instance
 end
 
-def self.all
-  sql = <<-SQL
-    SELECT *
-    FROM songs
-  SQL
+  def self.all
+    sql = <<-SQL
+      SELECT *
+      FROM songs
+      SQL
 
-  DB[:conn].execute(sql)
-end
+    DB[:conn].execute(sql)
+  end
 end
 
   def self.find_by_name(name)
