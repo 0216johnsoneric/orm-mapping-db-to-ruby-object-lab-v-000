@@ -10,6 +10,14 @@ class Student
 end
 
 
+# def self.all
+#   sql = <<-SQL
+#     SELECT *
+#     FROM students
+#     SQL
+#
+#   DB[:conn].execute(sql)
+# end
 
 
   def self.find_by_name(name)
@@ -41,14 +49,7 @@ end
     end
   end
 
-  # def self.all
-  #   sql = <<-SQL
-  #     SELECT *
-  #     FROM students
-  #     SQL
-  #
-  #   DB[:conn].execute(sql)
-  # end
+
 
   def save
     sql = <<-SQL
