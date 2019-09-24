@@ -30,19 +30,15 @@ end
     # return a new instance of the Student class
   end
 
-  # def self.count_all_students_in_grade_9
-  #   sql = <<-SQL
-  #     SELECT * FROM students WHERE grade = 9
-  #   SQL
-  # DB[:conn].execute(sql).collect do |row|
-  #   self.new_from_db(row)
-  #   end
-  # end
-
   def self.count_all_students_in_grade_9
-    sql = "SELECT * FROM students WHERE grade = 9"
-    DB[:conn].execute(sql)
+    sql = <<-SQL
+      SELECT * FROM students WHERE grade = 9
+    SQL
+  DB[:conn].execute(sql).collect do |row|
+    self.new_from_db(row)
+    end
   end
+
 
 
   def save
