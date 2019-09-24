@@ -34,7 +34,8 @@ end
     sql = <<-SQL
     SELECT * FROM students WHERE grade = 9
     SQL
-  end 
+  DB[:conn].execute(sql)
+  end
 
   def save
     sql = <<-SQL
