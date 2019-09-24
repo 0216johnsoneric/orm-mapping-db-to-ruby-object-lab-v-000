@@ -30,9 +30,9 @@ end
     # return a new instance of the Student class
   end
 
-  def all_students_in_grade_9(grade)
+  def all_students_in_grade_9(name, grade)
     sql = <<-SQL
-      SELECT * FROM students WHERE grade = 9
+      SELECT * FROM students WHERE name = ?, grade = 9
     SQL
   DB[:conn].execute(sql, grade)
   end
