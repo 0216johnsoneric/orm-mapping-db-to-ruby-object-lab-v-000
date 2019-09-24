@@ -9,12 +9,12 @@ class Student
   new_student  # return the newly created instance
 end
 
-  def self.all
-    sql = <<-SQL
-    SELECT *
-    FROM students
-    SQL
-  end
+  # def self.all
+  #   sql = <<-SQL
+  #   SELECT *
+  #   FROM students
+  #   SQL
+  # end
 
   def self.find_by_name(name)
     # find the student in the database given a name
